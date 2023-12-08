@@ -2,9 +2,9 @@ function calculate_SPA_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let legalFee = Math.ceil(purchasePrice / 1000) * 1000;
     if (legalFee <= 500000) {
-        legalFee = legalFee * 1.25 / 100;
+        legalFee = legalFee * 0.0125;
     } else {
-        legalFee = ((legalFee - 500000) * 1 / 100) + 500000 * 1.25 / 100;
+        legalFee = ((legalFee - 500000) * 0.01) + 500000 * 0.0125;
     }
 
 
@@ -16,9 +16,9 @@ function calculate_Loan_LegalFee() {
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
     let legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
     if (legalFee <= 500000) {
-        legalFee = legalFee * 1.25 / 100;
+        legalFee = legalFee * 0.0125;
     } else {
-        legalFee = ((legalFee - 500000) * 1 / 100) + 500000 * 1.25 / 100;
+        legalFee = ((legalFee - 500000) * 0.01) + 500000 * 0.0125;
     }
 
     return legalFee;
