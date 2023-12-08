@@ -1,6 +1,12 @@
 function calculate_SPA_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
-    let legalFee = Math.ceil(purchasePrice / 1000) * 1000;
+    let legalFee;
+    if (purchasePrice > 1000) {
+        legalFee = Math.ceil(purchasePrice / 1000) * 1000;
+    } else {
+        legalFee = purchasePrice;
+    }
+
     if (legalFee <= 500000) {
         legalFee = legalFee * 0.0125;
     } else {
@@ -14,7 +20,15 @@ function calculate_SPA_LegalFee() {
 function calculate_Loan_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
-    let legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
+
+    let legalFee;
+
+    if (purchasePrice > 1000) {
+        legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
+    } else {
+        legalFee = purchasePrice * financeMargin / 100;
+    }
+
     if (legalFee <= 500000) {
         legalFee = legalFee * 0.0125;
     } else {
@@ -26,7 +40,12 @@ function calculate_Loan_LegalFee() {
 
 function calculate_SPA_StampDuty() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
-    let stampDuty = Math.ceil(purchasePrice / 1000) * 1000;
+    let stampDuty;
+    if (purchasePrice > 1000) {
+        stampDuty = Math.ceil(purchasePrice / 1000) * 1000;
+    } else {
+        stampDuty = purchasePrice;
+    }
 
     if (stampDuty >= 100000) {
         if (500000 < stampDuty && stampDuty <= 1000000) {
@@ -48,7 +67,12 @@ function calculate_SPA_StampDuty() {
 function calculate_Loan_StampDuty() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
-    let stampDuty = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
+    let stampDuty;
+    if (purchasePrice > 1000) {
+        stampDuty = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
+    } else {
+        stampDuty = purchasePrice * financeMargin / 100;
+    }
 
     return stampDuty * 0.005;
 }
@@ -61,7 +85,7 @@ function updateDOM() {
 }
 
 function onlyNumberKey(evt) {
- 
+
     // Only ASCII character in that range allowed
     let ASCIICode = (evt.which) ? evt.which : evt.keyCode
     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
