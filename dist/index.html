@@ -9,7 +9,7 @@
 </head>
 <body class="bg-gray-100">
 
-    <div class="mx-auto my-9 w-4/5 h-full bg-white shadow-md  rounded-lg block ">
+    <div class="mx-auto my-9 w-4/5 h-full bg-white shadow-md rounded-lg block ">
         <p class="font-extrabold my-2 bg-amber-500 text-center block rounded-lg p-2">Legal Fees & Stamp Duty Calculator</p>   
         
         <div class="loanCalcBox grid gap-6 mb-6 md:grid-cols-2 p-3">
@@ -18,7 +18,7 @@
                 <input
                   type="text" id="purchasePrice"  
                   class="purchasePrice border-black peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                  placeholder=" " onchange="updateDOM()" />
+                  placeholder=" " onblur="updateDOM()" />
                 <label
                   class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-bold leading-tight text-rose-950 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                   Purchase Price (RM)
@@ -40,17 +40,15 @@
        
         <div class="block h-40">
             
-            <p class="font-bold text-xl text-center ">Result</p>
-            
             <div class="w-3/6 float-left block p-5">
                     <p class="font-bold">SPA</p>
                     <div class="SPA" >
                         <div class="w-full">
-                            <span class="float-left block w-4/6">Legal Fees : </span> 
-                            <span class="value1 float-left block w-2/6" id="value1">-</span>
+                            <span class="float-left block w-4/6 my-4">Legal Fees : </span> 
+                            <span class="value1 float-left block w-2/6 text-orange-950 font-semibold" id="value1"></span>
 
                             <span class="float-left block w-4/6">Stamp Duty : </span> 
-                            <span class="value2 float-left block w-2/6" id="value2"></span>
+                            <span class="value2 float-left block w-2/6 text-orange-950 font-semibold" id="value2"></span>
                             
                         </div>
 
@@ -63,11 +61,11 @@
                     <div class="Loan" >
                        
                         <div class="w-full">
-                            <span class="float-left block w-4/6">Legal Fees : </span> 
-                            <span class="value3 float-left block w-2/6" id="value3">-</span>
+                            <span class="float-left block w-4/6 my-4">Legal Fees : </span> 
+                            <span class="value3 float-left block w-2/6 text-orange-950 font-semibold" id="value3"></span>
 
                             <span class="float-left block w-4/6">Stamp Duty : </span> 
-                            <span class="value4 float-left block w-2/6" id="value4"></span>    
+                            <span class="value4 float-left block w-2/6 text-orange-950 font-semibold" id="value4"></span>    
                         </div>
   
                     </div>
@@ -77,6 +75,7 @@
 
     </div>
         
+
 
     
 </body>
