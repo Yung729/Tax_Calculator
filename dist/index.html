@@ -3,18 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link src="formula.js">
 </head>
 <body>
 
+    <div class="mx-auto my-9 w-4/5 bg-slate-100 rounded-lg block ">
+        <p class="font-extrabold my-2 bg-amber-500 text-center block rounded-lg p-2">Legal Fees & Stamp Duty Calculator</p>
+        
+        <div class="loanCalcBox grid gap-6 mb-6 md:grid-cols-2 p-3">
+            
+            <div class="relative h-11 w-full my-6 min-w-[200px] ">
+                <input
+                  type="text" id="purchasePrice"  
+                  class="purchasePrice border-black peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  placeholder=" " />
+                <label
+                  class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-bold leading-tight text-rose-950 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                  Purchase Price (RM)
+                </label>
+            </div>
 
-    <div class="m-5 flex flex-col">
-        <label for="age" class="mb-2 font-bold">Loan Amount input</label>
-        <input type="number" class="w-6/12 max-w-[200px] rounded-lg border border-solid border-black px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40" />
+            <div class="relative h-11 w-full my-6 min-w-[200px]">
+                <input
+                  type="number" id="financeMargin"  min="0" max="100"  
+                  class="financeMargin border-black peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  placeholder=" " />
+                <label
+                  class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-bold leading-tight text-rose-950 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                  Finance Margin (%) 
+                </label>
+            </div>
+
+        </div>
+       
+        <div class="w-full" >
+            <p class="block pl-3 font-bold text-2xl text-center bg-red-300">Result</p><br>
+            <div class="result grid gap-6 mb-6 md:grid-cols-2 p-3 w-full">
+            
+                <div class="py-2">
+                    <p class="font-bold">SPA</p>
+                    <div class="SPA" >
+                        <span>Legal Fees : </span> 
+                        <span class="value1">10000</span><br>
+                        <span>Stamp Duty : </span>
+                        <span class="value2">10000</span>
+                    </div>
+                </div>
+                <div>
+                    <p class="font-bold">Loan Agreement</p>
+                    <div class="Loan" >
+                        <span>Legal Fees : </span> 
+                        <span class="value1">10000</span><br>
+                        <span>Stamp Duty : </span>
+                        <span class="value2">10000</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-    
+        
 
-      
+    
 </body>
 </html>
