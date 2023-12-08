@@ -1,27 +1,27 @@
-const purchasePriceInput = document.getElementsByClassName(".purchasePrice");
-const financeMarginInput = document.getElementsByClassName(".financeMargin");
+const purchasePriceInput = document.getElementsById("purchasePrice");
+const financeMarginInput = document.getElementsById("financeMargin");
 
-const legalFee1 = document.getElementsByClassName(".legalFee .value1");
-const legalFee2 = document.getElementsByClassName(".legalFee .value2");
-const stampDuty1 = document.getElementsByClassName(".stampDuty .value1");
-const stampDuty2 = document.getElementsByClassName(".stampDuty .value2");
+const legalFee1 = document.getElementsById("value1");
+const legalFee2 = document.getElementsById("value2");
+const stampDuty1 = document.getElementsById("value3");
+const stampDuty2 = document.getElementsById("value4");
 
 let purchasePrice = parseFloat(purchasePriceInput.value);
 let financeMargin = parseFloat(financeMarginInput.value);
 
-const calculateLegalFee1 = () =>{
-    var legalFee = Math.ceil(purchasePrice/1000)*1000;
+const calculateLegalFee1 = () => {
+    const legalFee = Math.ceil(purchasePrice/1000)*1000;
         if(legalFee <= 500000){
             legalFee = legalFee * 1.25 / 100;
         }else{
             legalFee = ((legalFee - 500000) * 1 / 100) + 500000 * 1.25 / 100;
         }
 
-    return legalFee;
+    return legalFee; 
 }
 
 const calculateLegalFee2 = () => {
-    var legalFee = Math.ceil(purchasePrice/1000)*1000 * financeMargin/100;
+    const legalFee = Math.ceil(purchasePrice/1000)*1000 * financeMargin/100;
     if(legalFee <= 500000){
         legalFee = legalFee * 1.25 / 100;
     }else{
@@ -32,7 +32,7 @@ const calculateLegalFee2 = () => {
 } 
 
 const calculateStampDuty1 = () => {
-    var stampDuty = Math.ceil(purchasePrice/1000)*1000;
+    const stampDuty = Math.ceil(purchasePrice/1000)*1000;
     if(stampDuty>=100000){
         if(101000<stampDuty<500000){
             if (501000<stampDuty<1000000){
@@ -52,7 +52,7 @@ const calculateStampDuty1 = () => {
 }
 
 const calculateStampDuty2 = () => {
-    var stampDuty = Math.ceil(purchasePrice/1000)*1000 * financeMargin/100;
+    const stampDuty = Math.ceil(purchasePrice/1000)*1000 * financeMargin/100;
     if(stampDuty>=100000){
         if(101000<stampDuty<500000){
             if (501000<stampDuty<1000000){
