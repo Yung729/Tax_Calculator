@@ -1,4 +1,4 @@
-function calculateLegalFee1() {
+function calculate_SPA_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let legalFee = Math.ceil(purchasePrice / 1000) * 1000;
     if (legalFee <= 500000) {
@@ -10,7 +10,7 @@ function calculateLegalFee1() {
     return legalFee;
 }
 
-function calculateLegalFee2() {
+function calculate_Loan_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
     let legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
@@ -23,7 +23,7 @@ function calculateLegalFee2() {
     return legalFee;
 }
 
-function calculateStampDuty1() {
+function calculate_SPA_StampDuty() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let stampDuty = Math.ceil(purchasePrice / 1000) * 1000;
     
@@ -37,14 +37,14 @@ function calculateStampDuty1() {
             stampDuty = 100000 * 0.01 + (stampDuty - 100000) * 0.02;
         }
     } else {
-        stampDuty = stampDuty * 0.01;
-    }
+        stampDuty = stampDuty * 0.01;
+    }
 
     return stampDuty;
 
 }
 
-function calculateStampDuty2() {
+function calculate_Loan_StampDuty() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
     let stampDuty = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
@@ -54,9 +54,9 @@ function calculateStampDuty2() {
 }
 
 function updateDOM() {
-    document.getElementById("value1").innerHTML = calculateLegalFee1();
-    document.getElementById("value2").innerHTML = calculateStampDuty1();
-    document.getElementById("value3").innerHTML = calculateLegalFee2();
-    document.getElementById("value4").innerHTML = calculateStampDuty2();
+    document.getElementById("value1").innerHTML = calculate_SPA_LegalFee();
+    document.getElementById("value2").innerHTML = calculate_SPA_StampDuty();
+    document.getElementById("value3").innerHTML = calculate_Loan_LegalFee();
+    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty();
 }
 
