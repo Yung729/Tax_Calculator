@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <link src="formula.js">
+    <script src="formula.js"></script>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
                 <input
                   type="text" id="purchasePrice"  
                   class="purchasePrice border-black peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                  placeholder=" " />
+                  placeholder=" " onblur="updateDOM()" />
                 <label
                   class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-bold leading-tight text-rose-950 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                   Purchase Price (RM)
@@ -27,7 +27,7 @@
 
             <div class="relative h-11 w-full my-6 min-w-[200px]">
                 <input
-                  type="number" id="financeMargin"  min="0" max="100"  
+                  type="number" id="financeMargin"  min="0" max="100"  value="100"
                   class="financeMargin border-black peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                   placeholder=" " />
                 <label
@@ -47,12 +47,12 @@
                     <div class="SPA" >
                         <div class="w-full">
                             <span class="float-left block w-4/6">Legal Fees : </span> 
-                            <span class="value1 float-left block w-2/6">10000</span>
+                            <span class="value1 float-left block w-2/6" id="value1"></span>
                         </div>
 
                         <div class="w-full">
                             <span class="float-left block w-4/6">Stamp Duty : </span> 
-                            <span class="value2 float-left block w-2/6">10000</span>
+                            <span class="value2 float-left block w-2/6" id="value2"></span>
                         </div>
                     </div>
                 </div>
@@ -62,12 +62,12 @@
                     <div class="Loan" >
                         <div class="w-full">
                             <span class="float-left block w-4/6">Legal Fees : </span> 
-                            <span class="value1 float-left block w-2/6">10000</span>
+                            <span class="value3 float-left block w-2/6" id="value3"></span>
                         </div>
 
                         <div class="w-full">
                             <span class="float-left block w-4/6">Stamp Duty : </span> 
-                            <span class="value2 float-left block w-2/6">10000</span>
+                            <span class="value4 float-left block w-2/6" id="value4"></span>
                         </div>
                     </div>
                 </div>
