@@ -54,10 +54,10 @@ function calculate_Loan_StampDuty() {
 }
 
 function updateDOM() {
-    document.getElementById("value1").innerHTML = calculate_SPA_LegalFee();
-    document.getElementById("value2").innerHTML = calculate_SPA_StampDuty();
-    document.getElementById("value3").innerHTML = calculate_Loan_LegalFee();
-    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty();
+    document.getElementById("value1").innerHTML = calculate_SPA_LegalFee().toFixed(2);
+    document.getElementById("value2").innerHTML = calculate_SPA_StampDuty().toFixed(2);
+    document.getElementById("value3").innerHTML = calculate_Loan_LegalFee().toFixed(2);
+    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty().toFixed(2);
 }
 
 function onlyNumberKey(evt) {
