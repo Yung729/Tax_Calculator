@@ -7,6 +7,7 @@ function calculate_SPA_LegalFee() {
         legalFee = ((legalFee - 500000) * 1 / 100) + 500000 * 1.25 / 100;
     }
 
+
     return legalFee;
 }
 
@@ -26,7 +27,7 @@ function calculate_Loan_LegalFee() {
 function calculate_SPA_StampDuty() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let stampDuty = Math.ceil(purchasePrice / 1000) * 1000;
-    
+
     if (stampDuty >= 100000) {
         if (500000 < stampDuty && stampDuty <= 1000000) {
             stampDuty = 100000 * 0.01 + 400000 * 0.02 + (stampDuty - 500000) * 0.03;
@@ -48,9 +49,8 @@ function calculate_Loan_StampDuty() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
     let stampDuty = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
-    
 
-    return stampDuty * 0.005 ;
+    return stampDuty * 0.005;
 }
 
 function updateDOM() {
