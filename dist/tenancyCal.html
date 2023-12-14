@@ -30,11 +30,11 @@
             </div>
             <div class="relative"> 
                 <label for="start">Start date:</label>
-                <input type="date" id="startDate" name="tenancy-start" value="2018-07-22"  />
+                <input type="date" id="startDate" name="tenancy-start" value="2018-07-22" onblur="updateDOM()" />
                 
                 <label for="end">End date:</label>
-                <input type="date" id="endDate" name="tenancy-end" value="2018-07-22"  />
-
+                <input type="date" id="endDate" name="tenancy-end" value="2018-07-22"  onblur="updateDOM()" />
+                <p id="demo"></p>
             </div>
 
 
