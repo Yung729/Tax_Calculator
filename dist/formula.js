@@ -20,20 +20,37 @@ function calculate_SPA_LegalFee() {
 function calculate_Loan_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
+    let loanAmount = parseFloat(document.getElementById("loanAmount").value);
 
     let legalFee;
+    let priceConverted;
+    if(loanAmount > 0 ){
+        if (loanAmount <= 500000) {
+            loanAmount = loanAmount * 0.0125;
+        } else {
+            loanAmount = ((loanAmount - 500000) * 0.01) + 500000 * 0.0125;
+        }
 
-    if (purchasePrice > 1000) {
-        legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
-    } else {
-        legalFee = purchasePrice * financeMargin / 100;
+        legalFee = loanAmount;
+
+    }else{
+        if (purchasePrice > 1000) {
+            legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
+        } else {
+            legalFee = purchasePrice * financeMargin / 100;
+        }
+        priceConverted = legalFee;
+
+        if (legalFee <= 500000) {
+            legalFee = legalFee * 0.0125;
+        } else {
+            legalFee = ((legalFee - 500000) * 0.01) + 500000 * 0.0125;
+        }
+
+        document.getElementById("convertedAmount").innerHTML = priceConverted.toFixed(2);
     }
 
-    if (legalFee <= 500000) {
-        legalFee = legalFee * 0.0125;
-    } else {
-        legalFee = ((legalFee - 500000) * 0.01) + 500000 * 0.0125;
-    }
+    
 
     return legalFee;
 }
@@ -67,14 +84,24 @@ function calculate_SPA_StampDuty() {
 function calculate_Loan_StampDuty() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
+    let loanAmount = parseFloat(document.getElementById("loanAmount").value);
+
     let stampDuty;
-    if (purchasePrice > 1000) {
-        stampDuty = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
-    } else {
-        stampDuty = purchasePrice * financeMargin / 100;
+
+    if(loanAmount > 0 ){
+
+        return loanAmount * 0.005;
+
+    }else{
+        if (purchasePrice > 1000) {
+            stampDuty = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
+        } else {
+            stampDuty = purchasePrice * financeMargin / 100;
+        }
+        return stampDuty * 0.005;
     }
 
-    return stampDuty * 0.005;
+   
 }
 
 function updateDOM() {
