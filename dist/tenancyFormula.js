@@ -1,8 +1,16 @@
 function calculate_Loan_StampDuty(){
     let rentalRate = parseInt(document.getElementById("rentalRate").value);
-    let dayDiff = parseInt(document.getElementById("day2").value) - parseInt(document.getElementById("day1").value);
-    let monthDiff = parseInt(document.getElementById("month2").value) - parseInt(document.getElementById("month1").value);
-    let yearDiff = parseInt(document.getElementById("year2").value) - parseInt(document.getElementById("year1").value);
+    var startDate = new Date(document.getElementById("startDate"));
+    var endDate = new Date(document.getElementById("endDate"));
 
-    
+    var difference = endDate.getTime() - startDate.getTime();
+
+    var dayDifference = difference/(1000*60*60*24);
+    return dayDifference;
 }
+
+function init(){
+    document.getElementById("demo").innerHTML = calculate_Loan_StampDuty;
+}
+
+init();
