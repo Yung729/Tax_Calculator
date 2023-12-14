@@ -20,7 +20,7 @@
         <div class="loanCalcBox grid gap-6 mb-6 md:grid-cols-2 p-3">
 
             <div class="relative h-11 w-full my-6 min-w-[200px] ">
-                <input type="text" id="purchasePrice" inputmode="numeric"
+                <input type="text" id="rentalRate" inputmode="numeric"
                     class="purchasePrice  border-black  peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     placeholder=" " onblur="updateDOM()" onkeypress="return onlyNumberKey(event)" />
                 <label
@@ -30,10 +30,10 @@
             </div>
             <div class="relative"> 
                 <label for="start">Start date:</label>
-                <input type="date" id="startDate" name="tenancy-start" value="2018-07-22" onblur="updateDOM()" />
+                <input type="date" onchange="updateDOM()" id="startDate" name="tenancy-start" value="2018-07-22" onblur="updateDOM()" />
                 
                 <label for="end">End date:</label>
-                <input type="date" id="endDate" name="tenancy-end" value="2018-07-22"  onblur="updateDOM()" />
+                <input type="date"  onchange="updateDOM()" id="endDate" name="tenancy-end" value="2018-07-22"  onblur="updateDOM()" />
                 <p id="demo"></p>
             </div>
 

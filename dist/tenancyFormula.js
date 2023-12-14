@@ -1,25 +1,27 @@
-function tenancy_Days(){
+function tenancy_Days() {
     let startDate = new Date(document.getElementById("startDate").value);
     let endDate = new Date(document.getElementById("endDate").value);
 
     let difference = endDate.getTime() - startDate.getTime();
 
-    let dayDifference = difference/(1000*60*60*24);
-    
-    if(double(dayDifference/365)<=1)
+    let dayDifference = difference / (1000 * 60 * 60 * 24);
+
+    if (dayDifference / 365 <= 1) {
         return 1;
-    else if(double(dayDifference/365)>3)
+    } else if (dayDifference / 365 > 3) {
         return 4;
-    else
+    } else {
         return 2;
-    
+    }
 }
 
+
 function calculate_StampDuty_Amount(){
-    let rentalRate = parseInt(document.getElementById("rentalRate").value);
+    let rentalRate = document.getElementById("rentalRate").value;
     let remainder = Math.ceil((rentalRate*12-2400)/10)%100;
     let quotient = Math.floor((rentalRate*12-2400)/1000)*1000;
-    var amount;
+    let rate = tenancy_Days();
+    let amount;
 
     if(remainder>75)
         amount = quotient+1000;
@@ -32,12 +34,12 @@ function calculate_StampDuty_Amount(){
     else
         amount = quotient;
     
-    let stampDuty = amount/250 * tenancy_Days();
+    let stampDuty = amount/250 * rate;
     return stampDuty;
 }
 
 function updateDOM(){
-    document.getElementById("demo").innerHTML = tenancy_Days();
+    document.getElementById("demo").innerHTML = calculate_StampDuty_Amount();
 }
 
 
