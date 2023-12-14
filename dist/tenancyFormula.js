@@ -17,11 +17,11 @@ function tenancy_Days() {
 
 
 function calculate_StampDuty_Amount(){
-    let rentalRate = document.getElementById("rentalRate").value;
-    let remainder = Math.ceil((rentalRate*12-2400)/10)%100;
+    let rentalRate = parseFloat(document.getElementById("rentalRate").value);
+    let remainder = Math.ceil((rentalRate*12-2400)/100)%100;
     let quotient = Math.floor((rentalRate*12-2400)/1000)*1000;
     let rate = tenancy_Days();
-    let amount;
+    var amount;
 
     if(remainder>75)
         amount = quotient+1000;
