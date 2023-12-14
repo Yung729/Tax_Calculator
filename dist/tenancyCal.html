@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="tenancyFormula.js"></script>
 </head>
 <body>
-    
+    <form name="f" id="f" class="large bg-r pn" onsubmit="dau(this)" method="get" action="/date/durationresult.html">
+        <div class="form-row">
+            <div class="startDate">
+            <h2>Start Date</h2>
+                <div class="date-select">
+                    <div class="left">
+                        <label for="day1">Day:</label>
+                        <input tad-va="date" placeholder="dd" type="text" autocomplete="off" onfocus="window.ifc&&ifc(this,'d')" pattern="[0-9]*" maxlength="2" size="3" id="day1" name="day1" title="Please enter the day of the month as a one or two-digit number. The valid range is from 1 to 31.">
+                        <span class="slash">&nbsp;/&nbsp;</span>
+                    </div>
+
+                    <div class="left">
+                        <label for="month1">Month:</label>
+                        <input tad-va="date" placeholder="mm" type="text" autocomplete="off" onfocus="window.ifc&&ifc(this,'m')" maxlength="12" size="3" id="month1" name="month1" title="Please enter the month of the year as a one or two-digit number, or as a name. The valid numeric range is from 1 to 12, and valid names, for example, are 'Oct' or 'October'.">
+                        <span class="slash">&nbsp;/&nbsp;</span>
+                    </div>
+
+                    <div class="left">
+                        <label for="year1">Year:</label>
+                        <input placeholder="yyyy" type="text" autocomplete="off" tad-va="date" onfocus="window.ifc&&ifc(this,'y')" pattern="[0-9]*" maxlength="4" size="5" id="year1" name="year1" title="Enter year as a 4-digit number.">
+                    </div>
+                </div>
+            </div>
+
+            <div class="endDate">
+                <h2>End Date</h2>
+                <div class="date-select">
+                    <div class="left">
+                        <label for="day2">Day:</label>
+                        <input tad-va="date" placeholder="dd" type="text" autocomplete="off" onfocus="window.ifc&&ifc(this,'d')" pattern="[0-9]*" maxlength="2" size="3" id="day2" name="day2" title="Please enter the day of the month as a one or two-digit number. The valid range is from 1 to 31.">
+                        <span class="slash">&nbsp;/&nbsp;</span>
+                    </div>
+
+                    <div class="left">
+                        <label for="month1">Month:</label>
+                        <input tad-va="date" placeholder="mm" type="text" autocomplete="off" onfocus="window.ifc&&ifc(this,'m')" maxlength="12" size="3" id="month2" name="month2" title="Please enter the month of the year as a one or two-digit number, or as a name. The valid numeric range is from 1 to 12, and valid names, for example, are 'Oct' or 'October'.">
+                        <span class="slash">&nbsp;/&nbsp;</span>
+                    </div>
+
+                    <div class="left">
+                        <label for="year1">Year:</label>
+                        <input placeholder="yyyy" type="text" autocomplete="off" tad-va="date" onfocus="window.ifc&&ifc(this,'y')" pattern="[0-9]*" maxlength="4" size="5" id="year2" name="year2" title="Enter year as a 4-digit number.">
+                    </div>
+                </div>
+            </div>
+
+            <div class="rentalRateCol">
+                <label for="rentalRateInput">Input the Rental Rate: </label>
+                <input type="text" id="rentalRate" name="rentalRate" placeholder="Rental Rate"/>
+            </div>
+        </div>
+
+        <div class="endDate">
+
+        </div>
+    </form>
+
 </body>
 </html>
