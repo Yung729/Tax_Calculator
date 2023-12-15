@@ -12,22 +12,19 @@
     <script src="formula.js"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100" >
 
-    <div class="mx-auto my-9 w-4/5 h-full bg-white shadow-md rounded-lg block "  style="background-color: rgb(243, 243, 243);">
+    <div class="mx-auto my-9 w-4/5 h-full bg-white shadow-md rounded-lg block "
+        style="background-color: rgb(243, 243, 243);" >
 
-        <p class="title font-extrabold my-2 bg-amber-500 text-center block rounded-lg p-2">Legal Fees & Stamp Duty
+        <p class="font-extrabold my-2 bg-amber-500 text-center block rounded-lg p-2">Legal Fees & Stamp Duty
             Calculator
-            <img class="information" id="information" onclick="showTable()" style="cursor: pointer;" onpointermove=""
-                src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
+
         </p>
 
 
         <div class="loanCalcBox grid gap-6 md:grid-cols-2 grid-cols-2 p-3 ">
             <div>
-                <span class=" block  font-bold"> Loan Amount : </span><br>
-                <span id="convertedAmount" class=" font-bold text-orange-950">0.00</span>
-
 
                 <div class="relative h-11 w-full my-6 min-w-[200px] ">
                     <input type="text" id="purchasePrice" inputmode="numeric"
@@ -54,7 +51,7 @@
                 <div class="relative h-11  my-6 min-w-[200px] ">
                     <input type="text" id="loanAmount" inputmode="numeric"
                         class="loanAmount  border-black  peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                        placeholder=" " onkeyup="updateDOM()" onkeypress="return onlyNumberKey(event)"
+                        placeholder=" " onkeyup="updateDOMLoan()" onkeypress="return onlyNumberKey(event)"
                         autocomplete="off" />
                     <label
                         class="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-bold leading-tight text-rose-950 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
@@ -67,21 +64,28 @@
             <div>
 
                 <div style="height: 135px;">
-                    <p class="font-bold">SPA</p><br>
-                    <p class="float-left block w-4/6 ">Legal Fees : </p>
+                    <p class="font-bold">SPA</p><br><img class="information" id="information" onclick="showTable()"
+                        style="cursor: pointer;"
+                        src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
+                    <p class="title float-left block w-4/6 ">Legal Fees : </p>
                     <p class="value1 float-left block w-2/6 text-orange-950 font-semibold " id="value1">0.00</p>
                     <br><br>
-                    <p class="float-left block w-4/6">Stamp Duty : </p>
+                    <img class="information" id="information" onclick="showTable()" style="cursor: pointer;"
+                        src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
+                    <p class="title float-left block w-4/6">Stamp Duty : </p>
                     <p class="value2 float-left block w-2/6 text-orange-950 font-semibold" id="value2">0.00</p>
 
                 </div>
 
                 <div class="">
-                    <p class="font-bold">Loan Agreement</p><br>
-                    <p class="float-left block w-4/6 ">Legal Fees : </p>
+                    <p class="font-bold">Loan Agreement</p><br><img class="information" id="information"
+                        onclick="showTable()" style="cursor: pointer;"
+                        src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
+                    <p class="title float-left block w-4/6 ">Legal Fees : </p>
                     <p class="value3 float-left block w-2/6 text-orange-950 font-semibold" id="value3">0.00</p>
-                    <br><br>
-                    <p class="float-left block w-4/6">Stamp Duty : </p>
+                    <br><br><img class="information" id="information" onclick="showTable()" style="cursor: pointer;"
+                        src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
+                    <p class="title float-left block w-4/6">Stamp Duty : </p>
                     <p class="value4 float-left block w-2/6 text-orange-950 font-semibold" id="value4">0.00</p>
                 </div>
 
@@ -93,10 +97,10 @@
             <thead>
                 <tr>
                     <th>
-                        <h1>Value of property or loan (RM)</h1>
+                        <h1>Value of property (RM)</h1>
                     </th>
                     <th>
-                        <h1>Scale fees (%)</h1>
+                        <h1>SPA Scale fees (%)</h1>
                     </th>
                 </tr>
             </thead>
@@ -113,12 +117,12 @@
                     <td>Next 7,500,000</td>
                     <td>Subject to negotiation on the excess but shall not exceed 1% of such excess</td>
                 </tr>
-    
+
             </tbody>
         </table>
     </div>
 
-    
+
 
 
 

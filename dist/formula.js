@@ -17,28 +17,22 @@ function calculate_SPA_LegalFee() {
     return legalFee;
 }
 
-function calculate_Loan_LegalFee() {
+function calculate_Loan_LegalFee(mode) {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
     let loanAmount = parseFloat(document.getElementById("loanAmount").value);
 
     let legalFee;
     let priceConverted;
-    if(loanAmount > 0 ){
-        if (loanAmount <= 500000) {
-            loanAmount = loanAmount * 0.0125;
-        } else {
-            loanAmount = ((loanAmount - 500000) * 0.01) + 500000 * 0.0125;
-        }
+    let marginConverted;
 
-        legalFee = loanAmount;
-
-    }else{
+    if (mode == 1) {
         if (purchasePrice > 1000) {
             legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
         } else {
             legalFee = purchasePrice * financeMargin / 100;
         }
+
         priceConverted = legalFee;
 
         if (legalFee <= 500000) {
@@ -47,10 +41,28 @@ function calculate_Loan_LegalFee() {
             legalFee = ((legalFee - 500000) * 0.01) + 500000 * 0.0125;
         }
 
-        document.getElementById("convertedAmount").innerHTML = priceConverted.toFixed(2);
+
+        document.getElementById("loanAmount").value = priceConverted.toFixed(2);
+
+    } else if (mode == 2) {
+
+        if (loanAmount > 1000) {
+            legalFee = Math.ceil(loanAmount / 1000) * 1000 ;
+        } else {
+            legalFee = loanAmount ;
+        }
+
+        marginConverted = loanAmount / purchasePrice * 100;
+
+        if (legalFee <= 500000) {
+            legalFee = legalFee * 0.0125;
+        } else {
+            legalFee = ((legalFee - 500000) * 0.01) + 500000 * 0.0125;
+        }
+
+        document.getElementById("financeMargin").value = marginConverted;
     }
 
-    
 
     return legalFee;
 }
@@ -81,18 +93,14 @@ function calculate_SPA_StampDuty() {
 
 }
 
-function calculate_Loan_StampDuty() {
+function calculate_Loan_StampDuty(mode) {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let financeMargin = parseFloat(document.getElementById("financeMargin").value);
     let loanAmount = parseFloat(document.getElementById("loanAmount").value);
 
     let stampDuty;
 
-    if(loanAmount > 0 ){
-
-        return loanAmount * 0.005;
-
-    }else{
+    if (mode == 1) {
         if (purchasePrice > 1000) {
             stampDuty = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
         } else {
@@ -100,15 +108,29 @@ function calculate_Loan_StampDuty() {
         }
         return stampDuty * 0.005;
     }
+    else if (mode == 2) {
 
-   
+        return loanAmount * 0.005;
+
+    }
+
+
+
+
 }
 
 function updateDOM() {
     document.getElementById("value1").innerHTML = calculate_SPA_LegalFee().toFixed(2);
     document.getElementById("value2").innerHTML = calculate_SPA_StampDuty().toFixed(2);
-    document.getElementById("value3").innerHTML = calculate_Loan_LegalFee().toFixed(2);
-    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty().toFixed(2);
+    document.getElementById("value3").innerHTML = calculate_Loan_LegalFee(1).toFixed(2);
+    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty(1).toFixed(2);
+}
+
+function updateDOMLoan() {
+    document.getElementById("value1").innerHTML = calculate_SPA_LegalFee().toFixed(2);
+    document.getElementById("value2").innerHTML = calculate_SPA_StampDuty().toFixed(2);
+    document.getElementById("value3").innerHTML = calculate_Loan_LegalFee(2).toFixed(2);
+    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty(2).toFixed(2);
 }
 
 function onlyNumberKey(evt) {
@@ -123,8 +145,13 @@ function onlyNumberKey(evt) {
 function showTable() {
     var x = document.getElementById("container");
     if (x.style.display === "none") {
-      x.style.display = "block";
+        x.style.display = "block";
     } else {
-      x.style.display = "none";
+        x.style.display = "none";
     }
-  }
+}
+
+function closeTable() {
+    var x = document.getElementById("container");
+    x.style.display = "none";
+}

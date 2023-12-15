@@ -32,14 +32,15 @@
 .rateContainer {
     text-align: left;
     overflow: hidden;
-    width: 50%;
+    width: 25%;
     display: table;
     padding: 0 0 8em 0;
     position: absolute;
-    top: 15%;
-    right: 25%;
+    top: 20%;
+    right: 50%;
     display: none;
-    border-radius: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px -8px #c7c7c9;
 }
 
 .rateContainer td,
@@ -60,7 +61,7 @@
 }
 
 .rateContainer th {
-    background-color: #852020;
+    background-color: rgb(133 ,32 ,32,90%);
 }
 
 .rateContainer td:first-child {
@@ -98,11 +99,12 @@
 }
 
 .information {
-    width: 2%;
+    width: 3%;
+    margin-right: 5px;
     float: left;
 
 }
 
 .title {
-    width: 98%;
+    width: 60%;
 }
