@@ -15,15 +15,22 @@ function tenancy_Days() {
     }
 }
 
-function nearest250(remainder,quotient) {
-    if (remainder > 75)
-        return quotient + 1000;
-    else if (remainder > 50)
-        return quotient + 750;
-    else if (remainder > 25)
-        return quotient + 500;
-    else if (remainder > 0)
-        return quotient + 250;
+
+function calculate_StampDuty_Amount(){
+    let rentalRate = parseFloat(document.getElementById("rentalRate").value);
+    let remainder = (Math.ceil((rentalRate*12-2400)/100)*100)%1000;
+    let quotient = Math.floor((rentalRate*12-2400)/1000)*1000;
+    let rate = tenancy_Days();
+    var amount;
+
+    if(remainder>750)
+        amount = quotient+1000;
+    else if(remainder>500)
+        amount = quotient+750;
+    else if(remainder>250)
+        amount = quotient+500;
+    else if(remainder>0)
+        amount = quotient+250;
     else
         return quotient;
 
