@@ -3,6 +3,10 @@ function calculate_Difference(){
     let endDate = new Date(document.getElementById("endDate").value);
 
     let difference = endDate.getTime() - startDate.getTime();
+
+    if(difference < 0){ 
+        document.getElementById("yearCount").innerHTML = "INVALID";
+    }
     return difference;
 }
 
