@@ -1,10 +1,10 @@
-function calculate_Difference(){
+function calculate_Difference() {
     let startDate = new Date(document.getElementById("startDate").value);
     let endDate = new Date(document.getElementById("endDate").value);
 
     let difference = endDate.getTime() - startDate.getTime();
 
-    if(difference < 0){ 
+    if (difference < 0) {
         document.getElementById("yearCount").innerHTML = "INVALID";
     }
     return difference;
@@ -64,9 +64,9 @@ function onlyNumberKey(evt) {
 function showTenancyTable() {
     var x = document.getElementById("tenancyRateContainer");
     if (x.style.display === "none") {
-      x.style.display = "block";
+        x.style.display = "block";
     } else {
-      x.style.display = "none";
+        x.style.display = "none";
     }
-  }
+}
 
