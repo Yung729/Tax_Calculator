@@ -17,7 +17,8 @@
     font-weight: bold;
     font-size: 1em;
     text-align: left;
-    color: #ffffff;
+    
+    color: #a80117;
 
 }
 
@@ -61,7 +62,6 @@
 }
 
 .rateContainer th {
-    background-color: rgb(133 ,32 ,32,90%);
 }
 
 .rateContainer td:first-child {
@@ -107,4 +107,163 @@
 
 .title {
     width: 60%;
+}
+
+/**/
+
+
+.stampDutyContainer th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    color: #ffffff;
+
+}
+
+.stampDutyContainer td {
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.stampDutyContainer {
+    text-align: left;
+    overflow: hidden;
+    width: 25%;
+    display: table;
+    padding: 0 0 8em 0;
+    position: absolute;
+    top: 20%;
+    right: 50%;
+    display: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px -8px #c7c7c9;
+}
+
+.stampDutyContainer td,
+.stampDutyContainer th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.stampDutyContainer tr:nth-child(odd) {
+    background-color: rgb(240, 236, 236);
+}
+
+/* Background-color of the even rows */
+.stampDutyContainer tr:nth-child(even) {
+    background-color: #d6d7d8;
+}
+
+.stampDutyContainer th {
+    background-color: rgb(133 ,32 ,32,90%);
+}
+
+.stampDutyContainer td:first-child {
+    color: #a80117;
+    font-weight: bold;
+}
+
+.stampDutyContainer tr:hover {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow:0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.stampDutyContainer td:hover {
+    background-color: #ffffff;
+    color: #403E10;
+    font-weight: bold;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(1px, -1px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+/**/
+
+.stampDutyContainerzeropointFive th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    color: #ffffff;
+
+}
+
+.stampDutyContainerzeropointFive td {
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.stampDutyContainerzeropointFive {
+    text-align: left;
+    overflow: hidden;
+    width: 25%;
+    display: table;
+    padding: 0 0 8em 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    display: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px -8px #c7c7c9;
+}
+
+.stampDutyContainerzeropointFive td,
+.stampDutyContainerzeropointFive th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.stampDutyContainerzeropointFive tr:nth-child(odd) {
+    background-color: rgb(240, 236, 236);
+}
+
+/* Background-color of the even rows */
+.stampDutyContainerzeropointFive tr:nth-child(even) {
+    background-color: #d6d7d8;
+}
+
+.stampDutyContainerzeropointFive th {
+    background-color: rgb(133 ,32 ,32,90%);
+}
+
+.stampDutyContainerzeropointFive td:first-child {
+    color: #a80117;
+    font-weight: bold;
+}
+
+.stampDutyContainerzeropointFive tr:hover {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow:0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.stampDutyContainerzeropointFive td:hover {
+    background-color: #ffffff;
+    color: #403E10;
+    font-weight: bold;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(1px, -1px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
 }

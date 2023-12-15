@@ -144,14 +144,48 @@ function onlyNumberKey(evt) {
 
 function showTable() {
     var x = document.getElementById("container");
+    var y = document.getElementById("stampDutyContainer");
+    var z = document.getElementById("stampDutyContainerzeropointFive");
     if (x.style.display === "none") {
         x.style.display = "block";
+        y.style.display = "none";
+        z.style.display = "none";
     } else {
         x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
     }
 }
 
-function closeTable() {
+function showStampdutyTable() {
     var x = document.getElementById("container");
-    x.style.display = "none";
+    var y = document.getElementById("stampDutyContainer");
+    var z = document.getElementById("stampDutyContainerzeropointFive");
+    if (y.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "block";
+        z.style.display = "none";
+    } else {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
 }
+
+function showStampdutyzeroTable() {
+    var x = document.getElementById("container");
+    var y = document.getElementById("stampDutyContainer");
+    var z = document.getElementById("stampDutyContainerzeropointFive");
+    if (z.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "block";
+    } else {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+}
+
+
+
