@@ -1,10 +1,13 @@
-function tenancy_Days() {
+function calculate_Difference(){
     let startDate = new Date(document.getElementById("startDate").value);
     let endDate = new Date(document.getElementById("endDate").value);
 
     let difference = endDate.getTime() - startDate.getTime();
+    return difference;
+}
 
-    let dayDifference = difference / (1000 * 60 * 60 * 24);
+function tenancy_Days() {
+    let dayDifference = calculate_Difference() / (1000 * 60 * 60 * 24);
 
     if (dayDifference / 365 <= 1) {
         return 1;
@@ -14,7 +17,6 @@ function tenancy_Days() {
         return 2;
     }
 }
-
 
 function nearest250(remainder, quotient) {
     if (remainder > 75)
@@ -34,13 +36,15 @@ function calculate_TenancyFee_Amount() {
     let rentalRate = parseFloat(document.getElementById("rentalRate").value);
     let remainder = (Math.ceil((rentalRate * 12 - 2400) / 100) * 100) % 1000;
     let quotient = Math.floor((rentalRate * 12 - 2400) / 1000) * 1000;
-    let rate = tenancy_Days();
+    let rate = tenancy_Days(1);
     var amount = nearest250(remainder, quotient);
 
     return amount / 250 * rate;
 }
 
 function updateTenancyDOM() {
+    let yearDifference = (calculate_Difference() / (1000 * 60 * 60 * 24 * 365)).toFixed(2);
+    document.getElementById("yearCount").innerHTML = yearDifference + " Year(s)";
     document.getElementById("result").innerHTML = calculate_TenancyFee_Amount();
 }
 
