@@ -64,15 +64,15 @@
             <div>
 
                 <div style="height: 135px;">
-                    <p class="font-bold">SPA</p><br><img class="information" id="information" onclick="showTable()"
+                    <p class="font-bold">Sales & Purchase Agreement (SPA)</p><br><img class="information" id="information" onclick="showTable()"
                         style="cursor: pointer;"
                         src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
-                    <p class="title float-left block w-4/6 ">Legal Fees : </p>
+                    <p class="title float-left block w-4/6 ">SPA Legal Fees : </p>
                     <p class="value1 float-left block w-2/6 text-orange-950 font-semibold " id="value1">0.00</p>
                     <br><br>
-                    <img class="information" id="information" onclick="showTable()" style="cursor: pointer;"
+                    <img class="information" id="information" onclick="showStampdutyTable()" style="cursor: pointer;"
                         src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
-                    <p class="title float-left block w-4/6">Stamp Duty : </p>
+                    <p class="title float-left block w-4/6">MOT Stamp Duty : </p>
                     <p class="value2 float-left block w-2/6 text-orange-950 font-semibold" id="value2">0.00</p>
 
                 </div>
@@ -83,7 +83,7 @@
                         src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
                     <p class="title float-left block w-4/6 ">Legal Fees : </p>
                     <p class="value3 float-left block w-2/6 text-orange-950 font-semibold" id="value3">0.00</p>
-                    <br><br><img class="information" id="information" onclick="showTable()" style="cursor: pointer;"
+                    <br><br><img class="information" id="information" onclick="showStampdutyzeroTable()" style="cursor: pointer;"
                         src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
                     <p class="title float-left block w-4/6">Stamp Duty : </p>
                     <p class="value4 float-left block w-2/6 text-orange-950 font-semibold" id="value4">0.00</p>
@@ -117,6 +117,52 @@
                     <td>Next 7,500,000</td>
                     <td>Subject to negotiation on the excess but shall not exceed 1% of such excess</td>
                 </tr>
+
+            </tbody>
+        </table>
+
+        <table class="stampDutyContainer" id="stampDutyContainer">
+            <thead>
+                <tr>
+                    <th>
+                        <h1>Value of property (RM)</h1>
+                    </th>
+                    <th>
+                        <h1>SPA Scale fees (%)</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First 100,000</td>
+                    <td>1%</td>
+                </tr>
+                <tr>
+                    <td>100,001 to 500,000</td>
+                    <td>2% </td>
+                </tr>
+                <tr>
+                    <td>500,001 to 1,000,000</td>
+                    <td>3%</td>
+                </tr>
+                <tr>
+                    <td>above 1,000,000</td>
+                    <td>4%</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <table class="stampDutyContainerzeropointFive" id="stampDutyContainerzeropointFive">
+            
+            <tbody>
+                <tr>
+                    <td>The Stamp duty for loan agreements is at a fixed rate of 0.5% of the loan amount.
+
+                    </td>
+                    
+                </tr>
+                
 
             </tbody>
         </table>
