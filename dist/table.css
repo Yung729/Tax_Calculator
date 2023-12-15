@@ -17,7 +17,7 @@
     font-weight: bold;
     font-size: 0.9em;
     text-align: left;
-    
+
     color: #a80117;
 
 }
@@ -41,7 +41,7 @@
     display: none;
     border-radius: 15px;
     box-shadow: 2px 2px 5px -8px #c7c7c9;
-    border: 1px solid #0E1119;
+    border: 1px solid #0e1119af;
 }
 
 .rateContainer td,
@@ -54,6 +54,7 @@
 /* Background-color of the odd rows */
 .rateContainer tr:nth-child(odd) {
     background-color: #dad9d9;
+
 }
 
 /* Background-color of the even rows */
@@ -73,7 +74,7 @@
 .rateContainer tr:hover {
     background-color: #ffffff;
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-    -moz-box-shadow:0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
     box-shadow: 0 2px 2px -2px #0E1119;
 }
 
@@ -161,7 +162,7 @@
 }
 
 .stampDutyContainer th {
-    background-color: rgb(133 ,32 ,32,90%);
+    background-color: rgb(133, 32, 32, 90%);
 }
 
 .stampDutyContainer td:first-child {
@@ -172,7 +173,7 @@
 .stampDutyContainer tr:hover {
     background-color: #ffffff;
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-    -moz-box-shadow:0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
     box-shadow: 0 2px 2px -2px #0E1119;
 }
 
@@ -240,7 +241,7 @@
 }
 
 .stampDutyContainerzeropointFive th {
-    background-color: rgb(133 ,32 ,32,90%);
+    background-color: rgb(133, 32, 32, 90%);
 }
 
 .stampDutyContainerzeropointFive td:first-child {
@@ -251,7 +252,7 @@
 .stampDutyContainerzeropointFive tr:hover {
     background-color: #ffffff;
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-    -moz-box-shadow:0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
     box-shadow: 0 2px 2px -2px #0E1119;
 }
 
