@@ -1,3 +1,5 @@
+
+
 function calculate_SPA_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let legalFee;
@@ -146,14 +148,17 @@ function showTable() {
     var x = document.getElementById("container");
     var y = document.getElementById("stampDutyContainer");
     var z = document.getElementById("stampDutyContainerzeropointFive");
+    var a = document.getElementById("loanRateContainer");
     if (x.style.display === "none") {
         x.style.display = "block";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     } else {
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     }
 }
 
@@ -161,14 +166,17 @@ function showStampdutyTable() {
     var x = document.getElementById("container");
     var y = document.getElementById("stampDutyContainer");
     var z = document.getElementById("stampDutyContainerzeropointFive");
+    var a = document.getElementById("loanRateContainer");
     if (y.style.display === "none") {
         x.style.display = "none";
         y.style.display = "block";
         z.style.display = "none";
+        a.style.display = "none";
     } else {
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     }
 }
 
@@ -176,16 +184,39 @@ function showStampdutyzeroTable() {
     var x = document.getElementById("container");
     var y = document.getElementById("stampDutyContainer");
     var z = document.getElementById("stampDutyContainerzeropointFive");
+    var a = document.getElementById("loanRateContainer");
     if (z.style.display === "none") {
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "block";
+        a.style.display = "none";
     } else {
         x.style.display = "none";
         y.style.display = "none";
         z.style.display = "none";
+        a.style.display = "none";
     }
 }
+
+function showLoanLegalFeeTable() {
+    var x = document.getElementById("container");
+    var y = document.getElementById("stampDutyContainer");
+    var z = document.getElementById("stampDutyContainerzeropointFive");
+    var a = document.getElementById("loanRateContainer");
+    if (a.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+        a.style.display = "block";
+    } else {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+        a.style.display = "none";
+    }
+}
+
+
 
 
 

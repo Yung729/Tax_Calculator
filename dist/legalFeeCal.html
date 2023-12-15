@@ -79,7 +79,7 @@
 
                 <div class="">
                     <p class="font-bold">Loan Agreement</p><br><img class="information" id="information"
-                        onclick="showTable()" style="cursor: pointer;"
+                        onclick="showLoanLegalFeeTable()" style="cursor: pointer;"
                         src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png">
                     <p class="title float-left block w-4/6 ">Legal Fees : </p>
                     <p class="value3 float-left block w-2/6 text-orange-950 font-semibold" id="value3">0.00</p>
@@ -122,6 +122,8 @@
             </tbody>
         </table>
 
+
+
         <table class="stampDutyContainer" id="stampDutyContainer">
             <thead>
                 <tr>
@@ -154,6 +156,34 @@
             </tbody>
         </table>
 
+        <table class="loanRateContainer" id="loanRateContainer">
+            <thead>
+                <tr>
+                    <th>
+                        <h1>Value of property (RM)</h1>
+                    </th>
+                    <th>
+                        <h1>Loan Scale fees (%)</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First 500,000</td>
+                    <td>1.25% (subject to minimum of RM500)</td>
+                </tr>
+                <tr>
+                    <td>Next 7,000,000</td>
+                    <td>1% </td>
+                </tr>
+                <tr>
+                    <td>Next 7,500,000</td>
+                    <td>Subject to negotiation on the excess but shall not exceed 1% of such excess</td>
+                </tr>
+
+            </tbody>
+        </table>
+        
         <table class="stampDutyContainerzeropointFive" id="stampDutyContainerzeropointFive">
 
             <tbody>
@@ -167,6 +197,7 @@
 
             </tbody>
         </table>
+
     </div>
 
 
