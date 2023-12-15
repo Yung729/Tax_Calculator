@@ -15,7 +15,7 @@
 
 .rateContainer th h1 {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
     text-align: left;
     
     color: #a80117;
@@ -33,15 +33,15 @@
 .rateContainer {
     text-align: left;
     overflow: hidden;
-    width: 25%;
+    width: 30%;
     display: table;
-    padding: 0 0 8em 0;
     position: absolute;
     top: 20%;
     right: 50%;
     display: none;
     border-radius: 15px;
     box-shadow: 2px 2px 5px -8px #c7c7c9;
+    border: 1px solid #0E1119;
 }
 
 .rateContainer td,
@@ -53,20 +53,21 @@
 
 /* Background-color of the odd rows */
 .rateContainer tr:nth-child(odd) {
-    background-color: rgb(240, 236, 236);
+    background-color: #dad9d9;
 }
 
 /* Background-color of the even rows */
 .rateContainer tr:nth-child(even) {
-    background-color: #d6d7d8;
+    background-color: #dad9d9;
 }
 
 .rateContainer th {
+    background-color: rgb(235, 231, 231);
 }
 
 .rateContainer td:first-child {
     color: #a80117;
-    font-weight: bold;
+    font-weight: ;
 }
 
 .rateContainer tr:hover {
@@ -99,7 +100,7 @@
 }
 
 .information {
-    width: 3%;
+    width: 2.25%;
     margin-right: 5px;
     float: left;
 
