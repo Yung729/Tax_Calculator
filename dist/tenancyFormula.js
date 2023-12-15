@@ -32,14 +32,31 @@ function calculate_StampDuty_Amount(){
     else if(remainder>0)
         amount = quotient+250;
     else
-        amount = quotient;
-    
-    let stampDuty = amount/250 * rate;
-    return stampDuty;
+        return quotient;
+
 }
 
-function updateDOM(){
-    document.getElementById("demo").innerHTML = calculate_StampDuty_Amount();
+function calculate_TenancyFee_Amount() {
+    let rentalRate = parseFloat(document.getElementById("rentalRate").value);
+    let remainder = Math.ceil((rentalRate * 12 - 2400) / 100) % 100;
+    let quotient = Math.floor((rentalRate * 12 - 2400) / 1000) * 1000;
+    let rate = tenancy_Days();
+    var amount = nearest250(remainder,quotient);
+
+    return amount / 250 * rate;
+}
+
+function updateDOM() {
+    document.getElementById("demo").innerHTML = calculate_TenancyFee_Amount();
+}
+
+function onlyNumberKey(evt) {
+
+    // Only ASCII character in that range allowed
+    let ASCIICode = (evt.which) ? evt.which : evt.keyCode
+    if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+        return false;
+    return true;
 }
 
 
