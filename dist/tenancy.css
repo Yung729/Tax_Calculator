@@ -14,13 +14,13 @@ input[type="date"]{
     border-radius: 10px;
 }
 
-.resultTitle{
+.resultTitle, .duration{
     width: 50%;
     float:left;
     
 }
 
-#result{
+#result, #yearCount{
     color: black;
     font-weight: bold;
 }
