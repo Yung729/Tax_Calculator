@@ -29,13 +29,17 @@ function calculate_Loan_LegalFee(mode) {
     let marginConverted;
 
     if (mode == 1) {
+
+        
+
         if (purchasePrice > 1000) {
             legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
         } else {
             legalFee = purchasePrice * financeMargin / 100;
+            
         }
 
-        priceConverted = legalFee;
+        priceConverted = purchasePrice * financeMargin / 100;
 
         if (legalFee <= 500000) {
             legalFee = legalFee * 0.0125;
