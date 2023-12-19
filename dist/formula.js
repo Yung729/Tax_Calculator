@@ -1,4 +1,19 @@
 
+window.onclick = function (event) {
+    var myBox = document.getElementById('information');
+    var x = document.getElementById("container");
+    var y = document.getElementById("stampDutyContainer");
+    var z = document.getElementById("stampDutyContainerzeropointFive");
+    var a = document.getElementById("loanRateContainer");
+    if (event.target.contains(myBox) && event.target !== myBox) {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "none";
+        a.style.display = "none";
+    } else {
+        console.log('You clicked inside the box!');
+    }
+}
 
 function calculate_SPA_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
@@ -30,13 +45,13 @@ function calculate_Loan_LegalFee(mode) {
 
     if (mode == 1) {
 
-        
+
 
         if (purchasePrice > 1000) {
             legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
         } else {
             legalFee = purchasePrice * financeMargin / 100;
-            
+
         }
 
         priceConverted = purchasePrice * financeMargin / 100;
