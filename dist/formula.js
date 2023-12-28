@@ -130,7 +130,9 @@ function calculate_Loan_StampDuty(mode) {
         return stampDuty * 0.005;
     }
     else if (mode == 2) {
-
+        if (loanAmount > 1000) {
+            loanAmount = Math.ceil(loanAmount / 1000) * 1000;
+        }
         return loanAmount * 0.005;
 
     }
@@ -144,14 +146,14 @@ function updateDOM() {
     document.getElementById("value1").innerHTML = calculate_SPA_LegalFee().toFixed(2);
     document.getElementById("value2").innerHTML = calculate_SPA_StampDuty().toFixed(2);
     document.getElementById("value3").innerHTML = calculate_Loan_LegalFee(1).toFixed(2);
-    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty(1).toFixed(2);
+    document.getElementById("value4").innerHTML = Math.trunc(calculate_Loan_StampDuty(1)).toFixed(2);
 }
 
 function updateDOMLoan() {
     document.getElementById("value1").innerHTML = calculate_SPA_LegalFee().toFixed(2);
     document.getElementById("value2").innerHTML = calculate_SPA_StampDuty().toFixed(2);
     document.getElementById("value3").innerHTML = calculate_Loan_LegalFee(2).toFixed(2);
-    document.getElementById("value4").innerHTML = calculate_Loan_StampDuty(2).toFixed(2);
+    document.getElementById("value4").innerHTML = Math.trunc(calculate_Loan_StampDuty(2)).toFixed(2);
 }
 
 function onlyNumberKey(evt) {
