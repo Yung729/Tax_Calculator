@@ -18,11 +18,9 @@ window.onclick = function (event) {
 function calculate_SPA_LegalFee() {
     let purchasePrice = parseFloat(document.getElementById("purchasePrice").value);
     let legalFee;
-    if (purchasePrice > 1000) {
-        legalFee = Math.ceil(purchasePrice / 1000) * 1000;
-    } else {
-        legalFee = purchasePrice;
-    }
+
+    legalFee = purchasePrice;
+
 
     if (legalFee <= 500000) {
         legalFee = legalFee * 0.0125;
@@ -47,12 +45,10 @@ function calculate_Loan_LegalFee(mode) {
 
 
 
-        if (purchasePrice > 1000) {
-            legalFee = Math.ceil(purchasePrice / 1000) * 1000 * financeMargin / 100;
-        } else {
-            legalFee = purchasePrice * financeMargin / 100;
 
-        }
+        legalFee = purchasePrice * financeMargin / 100;
+
+
 
         priceConverted = purchasePrice * financeMargin / 100;
 
