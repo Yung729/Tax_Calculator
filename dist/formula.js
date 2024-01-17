@@ -63,11 +63,9 @@ function calculate_Loan_LegalFee(mode) {
 
     } else if (mode == 2) {
 
-        if (loanAmount > 1000) {
-            legalFee = Math.ceil(loanAmount / 1000) * 1000;
-        } else {
-            legalFee = loanAmount;
-        }
+
+        legalFee = loanAmount;
+
 
         marginConverted = loanAmount / purchasePrice * 100;
 
